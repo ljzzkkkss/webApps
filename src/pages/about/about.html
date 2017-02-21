@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      美女大全
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let labels of data" >
+    <button ion-item (click)="detal(labels.list,labels.title)">{{labels.title}}</button>
+  </div>
+  <div>
+    <button ion-button (click)="prev()" *ngIf="page > 1" style="float: left">上一页</button>
+    <button ion-button (click)="next()" style="float: right">下一页</button>
+  </div>
+</ion-content>

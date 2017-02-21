@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list [virtualScroll]="imglist">
+      <img *virtualItem="let surl" src={{surl.big}} (press)="save(surl.big)" >
+  </ion-list>
+</ion-content>
+
